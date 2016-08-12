@@ -3,11 +3,10 @@
   
   "name": "Umbrella Check",
   "description": "This extension will remind you to bring umbrella",
-  "version": "1.1",
+  "version": "1.2",
 
   "browser_action": {
-   "default_icon": "umbrella.png",
-   "default_popup": "popup.html"
+   "default_icon": "umbrella.png"
   },
   "content_scripts": [
     {
@@ -15,6 +14,9 @@
       "js": ["jquery.js"]
     }
   ],
+  "background": {
+    "scripts": ["popup.js", "jquery.js"]
+  },
   "permissions": [
    "activeTab",
    "notifications",
